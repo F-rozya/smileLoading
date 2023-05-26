@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #666688;
+}
+
+.smile-block {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 5vw;
+}
+.smile {
+    text-align: center;
+    font-size: 5vw;
+    border-radius: 100vw;
+    padding: 2vw;
+    background-color: #666688;
+    transform: translateX(200%);
+    opacity: 0;
+}
+@keyframes ross{
+    0%{
+        transform: translateX(200%);
+        box-shadow: #555577 -3vw 1vw 0.1vw;
+    }
+    50%{
+        transform: translateX(-200%);
+        box-shadow: #555577 3vw 1vw 0.1vw;
+    }
+    100%{
+        transform: translateX(200%);
+        box-shadow: #555577 -3vw 1vw 0.1vw;
+    }
+}
+.background {
+    background-color: white;
+    border-radius: 100vw;
+    overflow: hidden;
+    width: 15vw;
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(25%);
+}
+@keyframes rossbag{
+    0%{
+        transform: translateY(25%) scale(1);
+        box-shadow: #555577 0px 10px 0px;
+    }
+    50%{
+        transform: translateY(-25%) scale(1.025);
+        box-shadow: #555577 0px 50px 0px;
+    }
+    100%{
+        transform: translateY(25%) scale(1);
+        box-shadow: #555577 0px 10px 0px;
+    }
+}
+.background:nth-child(1){
+    animation: rossbag infinite 1s ease-in-out 0s;
+}
+.background:nth-child(2){
+    animation: rossbag infinite 1s ease-in-out 0.25s;
+}
+.background:nth-child(3){
+    animation: rossbag infinite 1s ease-in-out 0.5s;
+}
+.smile1{
+    animation: ross infinite 4s ease-in-out 0s;
+}
+.smile2{
+    animation: ross infinite 4s ease-in-out 0.25s;
+}
+.smile3{
+    animation: ross infinite 4s ease-in-out 0.5s;
+}
+
+.smile-on{
+    opacity: 1;
+}
+.title {
+    position: absolute;
+    text-align: center;
+    top: 10vh;
+    left: 50vw;
+    width: 100vw;
+    transform: translateX(-50%);
+    font-size: 5vw;
+    letter-spacing: 1vw;
+    filter: blur(0.08vw);
+}
